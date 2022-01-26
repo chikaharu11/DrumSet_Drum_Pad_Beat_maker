@@ -4426,12 +4426,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == RECORD_AUDIO_PERMISSION_REQUEST_CODE) {
             if (grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED) {
+                stickyImmersiveMode()
                 Toast.makeText(
                         this,
                         R.string.onRequestPermissionsResult1,
                         Toast.LENGTH_LONG
                 ).show()
             } else {
+                stickyImmersiveMode()
                 Toast.makeText(
                         this,
                         R.string.onRequestPermissionsResult2,
@@ -4442,12 +4444,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
         if (requestCode == READ_EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE) {
             if (grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED) {
+                stickyImmersiveMode()
                 Toast.makeText(
                         this,
                         R.string.onRequestPermissionsResult1,
                         Toast.LENGTH_LONG
                 ).show()
             } else {
+                stickyImmersiveMode()
                 Toast.makeText(
                         this,
                         R.string.onRequestPermissionsResult2,
