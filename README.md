@@ -1,1 +1,1 @@
-# Instant_DrumPad_TR-808
+# instant_drumpad_drums

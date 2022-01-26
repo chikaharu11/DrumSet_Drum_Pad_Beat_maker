@@ -1,4 +1,4 @@
-package jp.chikaharu11.instant_drumpad_tr808
+package jp.chikaharu11.instant_drumpad_drums
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

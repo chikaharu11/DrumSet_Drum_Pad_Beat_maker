@@ -1,12 +1,10 @@
-package jp.chikaharu11.instant_drumpad_tr808
+package jp.chikaharu11.instant_drumpad_drums
 
 import android.content.Context
 import android.media.MediaPlayer
 import android.media.MediaPlayer.OnCompletionListener
 import android.media.PlaybackParams
 import android.net.Uri
-import android.util.Log
-import android.widget.Toast
 
 
 class LoopMediaPlayer(context: Context, resId: Uri) {
