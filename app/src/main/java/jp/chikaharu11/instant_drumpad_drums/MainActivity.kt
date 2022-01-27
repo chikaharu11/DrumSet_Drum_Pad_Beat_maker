@@ -39,22 +39,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var adViewContainer: FrameLayout
     private lateinit var admobmAdView: AdView
 
-    private var mpDuration = 320
-    private var mpDuration2 = 625
-    private var mpDuration3 = 1294
-    private var mpDuration4 = 1033
-    private var mpDuration5 = 1465
-    private var mpDuration6 = 1072
-    private var mpDuration7 = 794
-    private var mpDuration8 = 1065
-    private var mpDuration9 = 1065
-    private var mpDuration10 = 1137
-    private var mpDuration11 = 773
-    private var mpDuration12 = 1070
-    private var mpDuration13 = 1050
-    private var mpDuration14 = 608
-    private var mpDuration15 = 55
-
     private var actionTitle = "rimshot_01".replace("_"," ").uppercase() + " loop"
     private var padText1 = "TR-8_cymbal_01".replace("_"," ").uppercase()
     private var padText2 = "cowbell_01b".replace("_"," ").uppercase()
@@ -136,8 +120,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var soundPool: SoundPool
 
     private lateinit var mp: MediaPlayer
-
-    private lateinit var getmpDuration: MediaPlayer
 
     private lateinit var lmp: LoopMediaPlayer
 
@@ -257,21 +239,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 findViewById<TextView>(R.id.padText15).text = "TR-8_rimshot_03".replace("_"," ").uppercase()
             }
             Configuration.ORIENTATION_LANDSCAPE -> {
-                mpDuration = 320
-                mpDuration2 = 1033
-                mpDuration3 = 794
-                mpDuration4 = 625
-                mpDuration5 = 1070
-                mpDuration6 = 1137
-                mpDuration7 = 55
-                mpDuration8 = 1065
-                mpDuration9 = 773
-                mpDuration10 = 1050
-                mpDuration11 = 1065
-                mpDuration12 = 608
-                mpDuration13 = 1294
-                mpDuration14 = 1072
-                mpDuration15 = 1465
                 padText1 = "TR-8_cymbal_01".replace("_"," ").uppercase()
                 padText2 = "open_hi_hat_01".replace("_"," ").uppercase()
                 padText3 = "clsd_hi_hat_01".replace("_"," ").uppercase()
@@ -1009,21 +976,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     padText13 = ""
                     padText14 = ""
                     padText15 = ""
-                    mpDuration = 0
-                    mpDuration2 = 0
-                    mpDuration3 = 0
-                    mpDuration4 = 0
-                    mpDuration5 = 0
-                    mpDuration6 = 0
-                    mpDuration7 = 0
-                    mpDuration8 = 0
-                    mpDuration9 = 0
-                    mpDuration10 = 0
-                    mpDuration11 = 0
-                    mpDuration12 = 0
-                    mpDuration13 = 0
-                    mpDuration14 = 0
-                    mpDuration15 = 0
                     count = 0.5f
                     bpm = 1.0f
                     soundPoolVolume = 0.5f
@@ -1175,21 +1127,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     padText13 = ""
                     padText14 = ""
                     padText15 = ""
-                    mpDuration = 0
-                    mpDuration2 = 0
-                    mpDuration3 = 0
-                    mpDuration4 = 0
-                    mpDuration5 = 0
-                    mpDuration6 = 0
-                    mpDuration7 = 0
-                    mpDuration8 = 0
-                    mpDuration9 = 0
-                    mpDuration10 = 0
-                    mpDuration11 = 0
-                    mpDuration12 = 0
-                    mpDuration13 = 0
-                    mpDuration14 = 0
-                    mpDuration15 = 0
                     count = 0.5f
                     bpm = 1.0f
                     soundPoolVolume = 0.5f
@@ -1998,7 +1935,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound1, soundPoolVolume, soundPoolVolume, 1, 0, soundPoolTempo)
-                    effect(binding.imageView,"%.0f".format((mpDuration * 10) / (soundPoolTempo * 10)).toInt())
                 }
             }
                 false
@@ -2017,7 +1953,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound2, soundPoolVolume2, soundPoolVolume2, 1, 0, soundPoolTempo2)
-                    effect(binding.imageView2,"%.0f".format((mpDuration2 * 10) / (soundPoolTempo2 * 10)).toInt())
                 }
             }
                 false
@@ -2036,7 +1971,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound3, soundPoolVolume3, soundPoolVolume3, 1, 0, soundPoolTempo3)
-                    effect(binding.imageView3,"%.0f".format((mpDuration3 * 10) / (soundPoolTempo3 * 10)).toInt())
                 }
             }
                 false
@@ -2055,7 +1989,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound4, soundPoolVolume4, soundPoolVolume4, 1, 0, soundPoolTempo4)
-                    effect(binding.imageView4,"%.0f".format((mpDuration4 * 10) / (soundPoolTempo4 * 10)).toInt())
                 }
             }
                 false
@@ -2074,7 +2007,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound5, soundPoolVolume5, soundPoolVolume5, 1, 0, soundPoolTempo5)
-                    effect(binding.imageView5,"%.0f".format((mpDuration5 * 10) / (soundPoolTempo5 * 10)).toInt())
                 }
             }
                 false
@@ -2093,7 +2025,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound6, soundPoolVolume6, soundPoolVolume6, 1, 0, soundPoolTempo6)
-                    effect(binding.imageView6,"%.0f".format((mpDuration6 * 10) / (soundPoolTempo6 * 10)).toInt())
                 }
             }
                 false
@@ -2112,7 +2043,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound7, soundPoolVolume7, soundPoolVolume7, 1, 0, soundPoolTempo7)
-                    effect(binding.imageView7,"%.0f".format((mpDuration7 * 10) / (soundPoolTempo7 * 10)).toInt())
                 }
             }
                 false
@@ -2131,7 +2061,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound8, soundPoolVolume8, soundPoolVolume8, 1, 0, soundPoolTempo8)
-                    effect(binding.imageView8,"%.0f".format((mpDuration8 * 10) / (soundPoolTempo8 * 10)).toInt())
                 }
             }
                 false
@@ -2150,7 +2079,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound9, soundPoolVolume9, soundPoolVolume9, 1, 0, soundPoolTempo9)
-                    effect(binding.imageView9,"%.0f".format((mpDuration9 * 10) / (soundPoolTempo9 * 10)).toInt())
                 }
             }
                 false
@@ -2170,7 +2098,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound10, soundPoolVolume10, soundPoolVolume10, 1, 0, soundPoolTempo10)
-                    effect(binding.imageView10,"%.0f".format((mpDuration10 * 10) / (soundPoolTempo10 * 10)).toInt())
                 }
             }
                 false
@@ -2189,7 +2116,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound11, soundPoolVolume11, soundPoolVolume11, 1, 0, soundPoolTempo11)
-                    effect(binding.imageView11,"%.0f".format((mpDuration11 * 10) / (soundPoolTempo11 * 10)).toInt())
                 }
             }
                 false
@@ -2208,7 +2134,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound12, soundPoolVolume12, soundPoolVolume12, 1, 0, soundPoolTempo12)
-                    effect(binding.imageView12,"%.0f".format((mpDuration12 * 10) / (soundPoolTempo12 * 10)).toInt())
                 }
             }
                 false
@@ -2227,7 +2152,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound13, soundPoolVolume13, soundPoolVolume13, 1, 0, soundPoolTempo13)
-                    effect(binding.imageView13,"%.0f".format((mpDuration13 * 10) / (soundPoolTempo13 * 10)).toInt())
                 }
             }
                 false
@@ -2246,7 +2170,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound14, soundPoolVolume14, soundPoolVolume14, 1, 0, soundPoolTempo14)
-                    effect(binding.imageView14,"%.0f".format((mpDuration14 * 10) / (soundPoolTempo14 * 10)).toInt())
                 }
             }
                 false
@@ -2265,7 +2188,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
                 event.action == MotionEvent.ACTION_DOWN -> {
                     soundPool.play(sound15, soundPoolVolume15, soundPoolVolume15, 1, 0, soundPoolTempo15)
-                    effect(binding.imageView15,"%.0f".format((mpDuration15 * 10) / (soundPoolTempo15 * 10)).toInt())
                 }
             }
                 false
@@ -3742,11 +3664,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 1 && buttonB == 1 -> {
                     effect(binding.imageView,400)
                     sound1 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3763,11 +3680,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 2 && buttonB == 1 -> {
                     effect(binding.imageView2,400)
                     sound2 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration2 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3784,11 +3696,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 3 && buttonB == 1 -> {
                     effect(binding.imageView3,400)
                     sound3 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration3 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3805,11 +3712,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 4 && buttonB == 1 -> {
                     effect(binding.imageView4,400)
                     sound4 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration4 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3826,11 +3728,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 5 && buttonB == 1 -> {
                     effect(binding.imageView5,400)
                     sound5 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration5 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3847,11 +3744,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 6 && buttonB == 1 -> {
                     effect(binding.imageView6,400)
                     sound6 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration6 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3868,11 +3760,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 7 && buttonB == 1 -> {
                     effect(binding.imageView7,400)
                     sound7 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration7 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3889,11 +3776,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 8 && buttonB == 1 -> {
                     effect(binding.imageView8,400)
                     sound8 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration8 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3910,11 +3792,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 9 && buttonB == 1 -> {
                     effect(binding.imageView9,400)
                     sound9 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration9 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3931,11 +3808,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 10 && buttonB == 1 -> {
                     effect(binding.imageView10,400)
                     sound10 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration10 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3952,11 +3824,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 11 && buttonB == 1 -> {
                     effect(binding.imageView11,400)
                     sound11 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration11 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3973,11 +3840,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 12 && buttonB == 1 -> {
                     effect(binding.imageView12,400)
                     sound12 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration12 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -3994,11 +3856,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 13 && buttonB == 1 -> {
                     effect(binding.imageView13,400)
                     sound13 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration13 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4015,11 +3872,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 14 && buttonB == 1 -> {
                     effect(binding.imageView14,400)
                     sound14 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration14 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4036,11 +3888,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 15 && buttonB == 1 -> {
                     effect(binding.imageView15,400)
                     sound15 = soundPool.load(soundList.name, 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(this, Uri.parse(soundList.name))
-                    getmpDuration.prepare()
-                    mpDuration15 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4071,13 +3918,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 1 && buttonB == 2 -> {
                     effect(binding.imageView,400)
                     sound1 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4092,13 +3932,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 2 && buttonB == 2 -> {
                     effect(binding.imageView2,400)
                     sound2 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration2 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4113,13 +3946,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 3 && buttonB == 2 -> {
                     effect(binding.imageView3,400)
                     sound3 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration3 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4134,13 +3960,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 4 && buttonB == 2 -> {
                     effect(binding.imageView4,400)
                     sound4 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration4 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4155,13 +3974,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 5 && buttonB == 2 -> {
                     effect(binding.imageView5,400)
                     sound5 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration5 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4176,13 +3988,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 6 && buttonB == 2 -> {
                     effect(binding.imageView6,400)
                     sound6 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration6 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4197,13 +4002,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 7 && buttonB == 2 -> {
                     effect(binding.imageView7,400)
                     sound7 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration7 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4218,13 +4016,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 8 && buttonB == 2 -> {
                     effect(binding.imageView8,400)
                     sound8 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration8 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4239,13 +4030,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 9 && buttonB == 2 -> {
                     effect(binding.imageView9,400)
                     sound9 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration9 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4260,13 +4044,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 10 && buttonB == 2 -> {
                     effect(binding.imageView10,400)
                     sound10 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration10 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4281,13 +4058,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 11 && buttonB == 2 -> {
                     effect(binding.imageView11,400)
                     sound11 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration11 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4302,13 +4072,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 12 && buttonB == 2 -> {
                     effect(binding.imageView12,400)
                     sound12 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration12 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4323,13 +4086,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 13 && buttonB == 2 -> {
                     effect(binding.imageView13,400)
                     sound13 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration13 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4344,13 +4100,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 14 && buttonB == 2 -> {
                     effect(binding.imageView14,400)
                     sound14 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration14 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
@@ -4365,13 +4114,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 buttonA == 15 && buttonB == 2 -> {
                     effect(binding.imageView15,400)
                     sound15 = soundPool.load(assets.openFd(soundList.name), 1)
-                    getmpDuration = MediaPlayer()
-                    getmpDuration.setDataSource(assets.openFd(soundList.name).fileDescriptor,
-                        assets.openFd(soundList.name).startOffset,
-                        assets.openFd(soundList.name).declaredLength)
-                    getmpDuration.prepare()
-                    mpDuration15 = getmpDuration.duration
-                    getmpDuration.release()
                     soundPool.setOnLoadCompleteListener { soundPool, _, _ ->
                         soundPool.stop(soundPool.play(sound16, 1.0f, 1.0f, 0, 0, 1.0f))
                     }
