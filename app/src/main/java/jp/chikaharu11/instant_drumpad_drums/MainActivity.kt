@@ -871,18 +871,30 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
         val choose = if (locale == Locale.JAPAN) {
             arrayOf(
+                "ドラムパッドをリセット",
                 "演奏モード⇔パッド音の変更",
-                "メトロノーム",
-                "ドラムレストラック",
-                "外部サウンド・ループ",
-                "ドラムパッドをリセット"
+                "Metronome loops",
+                "Bass loops",
+                "Drums loops",
+                "Guitar loops",
+                "Keys loops",
+                "Orch loops",
+                "Percussion loops",
+                "Synth loops",
+                "External sound loops"
             ) } else {
             arrayOf(
+                "Reset drum pads",
                 "Play mode ↔ Change pad sounds",
-                "Metronome",
-                "Drumless Track",
-                "External sound Loops",
-                "Reset drum pads"
+                "Metronome loops",
+                "Bass loops",
+                "Drums loops",
+                "Guitar loops",
+                "Keys loops",
+                "Orch loops",
+                "Percussion loops",
+                "Synth loops",
+                "External sound loops"
             )
         }
         val adapter2 = ArrayAdapter(this, R.layout.custom_spinner_dropdown, choose)
@@ -907,44 +919,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             gridView2.visibility = View.INVISIBLE
                         }
                     }
-                }
-                "メトロノーム" -> {
-                    lmp.stop()
-                    menuSwitch = true
-                    invalidateOptionsMenu()
-                    switch1 = 2
-                    buttonA = 16
-                    buttonB = 2
-                    soundListView.adapter = nCustomAdapter
-                    nCustomAdapter.notifyDataSetChanged()
-                    soundListView.visibility = View.VISIBLE
-                    gridView2.visibility = View.INVISIBLE
-                }
-                "ドラムレストラック" -> {
-                    lmp.stop()
-                    menuSwitch = true
-                    invalidateOptionsMenu()
-                    switch1 = 2
-                    buttonA = 16
-                    buttonB = 2
-                    soundListView.adapter = oCustomAdapter
-                    oCustomAdapter.notifyDataSetChanged()
-                    soundListView.visibility = View.VISIBLE
-                    gridView2.visibility = View.INVISIBLE
-                }
-
-                "外部サウンド・ループ" -> {
-                    lmp.stop()
-                    menuSwitch = true
-                    invalidateOptionsMenu()
-                    switch1 = 2
-                    buttonA = 16
-                    buttonB = 1
-                    selectEX()
-                    soundListView.adapter = tCustomAdapter
-                    tCustomAdapter.notifyDataSetChanged()
-                    soundListView.visibility = View.VISIBLE
-                    gridView2.visibility = View.INVISIBLE
                 }
                 "ドラムパッドをリセット" -> {
                     binding.textView.text = ""
@@ -1059,7 +1033,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         }
                     }
                 }
-                "Metronome" -> {
+                "Metronome loops" -> {
+                    lmp.stop()
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    switch1 = 2
+                    buttonA = 16
+                    buttonB = 2
+                    soundListView.adapter = tCustomAdapter
+                    tCustomAdapter.notifyDataSetChanged()
+                    soundListView.visibility = View.VISIBLE
+                    gridView2.visibility = View.INVISIBLE
+                }
+                "Bass loops" -> {
                     lmp.stop()
                     menuSwitch = true
                     invalidateOptionsMenu()
@@ -1071,7 +1057,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     soundListView.visibility = View.VISIBLE
                     gridView2.visibility = View.INVISIBLE
                 }
-                "Drumless Track" -> {
+                "Drums loops" -> {
                     lmp.stop()
                     menuSwitch = true
                     invalidateOptionsMenu()
@@ -1080,6 +1066,66 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     buttonB = 2
                     soundListView.adapter = oCustomAdapter
                     oCustomAdapter.notifyDataSetChanged()
+                    soundListView.visibility = View.VISIBLE
+                    gridView2.visibility = View.INVISIBLE
+                }
+                "Guitar loops" -> {
+                    lmp.stop()
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    switch1 = 2
+                    buttonA = 16
+                    buttonB = 2
+                    soundListView.adapter = pCustomAdapter
+                    pCustomAdapter.notifyDataSetChanged()
+                    soundListView.visibility = View.VISIBLE
+                    gridView2.visibility = View.INVISIBLE
+                }
+                "Keys loops" -> {
+                    lmp.stop()
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    switch1 = 2
+                    buttonA = 16
+                    buttonB = 2
+                    soundListView.adapter = qCustomAdapter
+                    qCustomAdapter.notifyDataSetChanged()
+                    soundListView.visibility = View.VISIBLE
+                    gridView2.visibility = View.INVISIBLE
+                }
+                "Orch loops" -> {
+                    lmp.stop()
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    switch1 = 2
+                    buttonA = 16
+                    buttonB = 2
+                    soundListView.adapter = rCustomAdapter
+                    rCustomAdapter.notifyDataSetChanged()
+                    soundListView.visibility = View.VISIBLE
+                    gridView2.visibility = View.INVISIBLE
+                }
+                "Percussion loops" -> {
+                    lmp.stop()
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    switch1 = 2
+                    buttonA = 16
+                    buttonB = 2
+                    soundListView.adapter = baCustomAdapter
+                    baCustomAdapter.notifyDataSetChanged()
+                    soundListView.visibility = View.VISIBLE
+                    gridView2.visibility = View.INVISIBLE
+                }
+                "Synth loops" -> {
+                    lmp.stop()
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    switch1 = 2
+                    buttonA = 16
+                    buttonB = 2
+                    soundListView.adapter = bbCustomAdapter
+                    bbCustomAdapter.notifyDataSetChanged()
                     soundListView.visibility = View.VISIBLE
                     gridView2.visibility = View.INVISIBLE
                 }
@@ -1700,7 +1746,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             SoundList("bass_120_05.ogg"),
             SoundList("bass_120_06.ogg"),
             SoundList("bass_120_07.ogg"),
-            SoundList("bass_120_08.ogg")
+            SoundList("bass_120_08.ogg"),
         )
         oSoundList = arrayListOf(
             SoundList("drums_85_01.ogg"),
@@ -2005,7 +2051,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             SoundList("synth_120_04.ogg")
         )
         sSoundList = arrayListOf()
-        tSoundList = arrayListOf()
+        tSoundList = arrayListOf(
+            SoundList("pearlpiccolo_side_snroff_01.ogg"),
+            SoundList("pearlpiccolo_side_snron_01.ogg"),
+            SoundList("acoustic_hat_01.ogg"),
+            SoundList("khats_clsd_01.ogg"),
+            SoundList("closed_hat_03.ogg"),
+            SoundList("tom_2.ogg"),
+            SoundList("kick_04.ogg"),
+        )
 
         a0CustomAdapter = CustomAdapter(this, a0SoundList, this)
         aCustomAdapter = CustomAdapter(this, aSoundList, this)
@@ -2187,44 +2241,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         soundListView.visibility = View.VISIBLE
                     }
                     18 -> {
-                        binding.textView.text = ""
-                        binding.textView2.text = ""
-                        binding.textView3.text = ""
-                        binding.textView4.text = ""
-                        binding.textView5.text = ""
-                        binding.textView6.text = ""
-                        binding.textView7.text = ""
-                        binding.textView8.text = ""
-                        binding.textView9.text = ""
-                        binding.textView10.text = ""
-                        binding.textView11.text = ""
-                        binding.textView12.text = ""
-                        binding.textView13.text = ""
-                        binding.textView14.text = ""
-                        binding.textView15.text = ""
-                        sound1 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound2 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound3 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound4 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound5 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound6 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound7 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound8 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound9 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound10 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound11 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound12 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound13 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound14 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                        sound15 = soundPool.load(assets.openFd("soundless.ogg"), 1)
-                    }
-                    19 -> {
                         buttonB = 1
                         soundListView.adapter = sCustomAdapter
                         sCustomAdapter.notifyDataSetChanged()
                         soundListView.visibility = View.VISIBLE
                     }
-                    20 -> {
+                    19 -> {
                         selectEX()
                         buttonB = 1
                         soundListView.adapter = tCustomAdapter

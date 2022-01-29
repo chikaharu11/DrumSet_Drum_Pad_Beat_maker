@@ -200,6 +200,7 @@
         android:layout_marginBottom="1dp"
         android:foreground="@drawable/my_ripple2"
         android:scaleType="fitXY"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toStartOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="parent"
@@ -215,6 +216,7 @@
         android:layout_marginBottom="1dp"
         android:foreground="@drawable/my_ripple2"
         android:scaleType="fitXY"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
@@ -230,6 +232,7 @@
         android:layout_marginBottom="1dp"
         android:foreground="@drawable/my_ripple2"
         android:scaleType="fitXY"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
@@ -425,6 +428,7 @@
         android:layout_marginBottom="1dp"
         android:foreground="@drawable/my_ripple"
         android:scaleType="fitXY"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toStartOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="parent"
@@ -440,6 +444,7 @@
         android:layout_marginBottom="1dp"
         android:foreground="@drawable/my_ripple"
         android:scaleType="fitXY"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toStartOf="@+id/imageView15"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
@@ -455,6 +460,7 @@
         android:layout_marginBottom="1dp"
         android:foreground="@drawable/my_ripple"
         android:scaleType="fitXY"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
@@ -663,6 +669,7 @@
         android:text="@string/textView13"
         android:textColor="#2b2b2b"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
@@ -679,6 +686,7 @@
         android:text="@string/textView14"
         android:textColor="#2b2b2b"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
@@ -696,6 +704,7 @@
         android:text="@string/textView15"
         android:textColor="#2b2b2b"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView15"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView15"
@@ -726,14 +735,13 @@
         android:id="@+id/grid_view_choose"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
         android:background="#5A5A66"
-        android:numColumns="1"
+        android:numColumns="2"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/space2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_weight="4"/>
+        app:layout_constraintHorizontal_weight="1"/>
 
     <Space
         android:id="@+id/space2"
@@ -745,7 +753,7 @@
         app:layout_constraintEnd_toStartOf="@id/grid_view_choose"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_weight="1"/>
+        app:layout_constraintHorizontal_weight="0"/>
 
     <GridView
         android:id="@+id/grid_view"

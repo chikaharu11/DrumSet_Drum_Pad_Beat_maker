@@ -65,10 +65,8 @@
         <item>Snares [Tama Wood]</item>
         <item>Snares [Wooden Piccolo]</item>
         <item>Toms</item>
-        <item>Reset drum pads</item>
         <item>Internal sounds</item>
         <item>External sounds</item>
-        <item>Sounds in Music folder</item>
     </string-array>
 
     <string-array name="spinnerItems2">
