@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var adViewContainer: FrameLayout
     private lateinit var admobmAdView: AdView
 
-    private var actionTitle = "rimshot_01".replace("_"," ").uppercase() + " loop"
+    private var actionTitle = "bass_100_01".replace("_"," ").uppercase() + " loop"
     private var padText1 = "cymbal_01".replace("_"," ").uppercase()
     private var padText2 = "".replace("_"," ").uppercase()
     private var padText3 = "cymbal_02".replace("_"," ").uppercase()
@@ -152,6 +152,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     private lateinit var sCustomAdapter: CustomAdapter
     private lateinit var tCustomAdapter: CustomAdapter
+    private lateinit var uCustomAdapter: CustomAdapter
 
     private lateinit var a0SoundList: MutableList<SoundList>
     private lateinit var aSoundList: MutableList<SoundList>
@@ -182,6 +183,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     private lateinit var sSoundList: MutableList<SoundList>
     private lateinit var tSoundList: MutableList<SoundList>
+    private lateinit var uSoundList: MutableList<SoundList>
 
     private var sound1 = 0
     private var sound2 = 0
@@ -1040,8 +1042,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     switch1 = 2
                     buttonA = 16
                     buttonB = 2
-                    soundListView.adapter = tCustomAdapter
-                    tCustomAdapter.notifyDataSetChanged()
+                    soundListView.adapter = uCustomAdapter
+                    uCustomAdapter.notifyDataSetChanged()
                     soundListView.visibility = View.VISIBLE
                     gridView2.visibility = View.INVISIBLE
                 }
@@ -1130,7 +1132,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     gridView2.visibility = View.INVISIBLE
                 }
 
-                "External sound Loops" -> {
+                "External sound loops" -> {
                     lmp.stop()
                     menuSwitch = true
                     invalidateOptionsMenu()
@@ -2051,14 +2053,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             SoundList("synth_120_04.ogg")
         )
         sSoundList = arrayListOf()
-        tSoundList = arrayListOf(
+        tSoundList = arrayListOf()
+        uSoundList = arrayListOf(
             SoundList("pearlpiccolo_side_snroff_01.ogg"),
             SoundList("pearlpiccolo_side_snron_01.ogg"),
             SoundList("acoustic_hat_01.ogg"),
             SoundList("khats_clsd_01.ogg"),
             SoundList("closed_hat_03.ogg"),
             SoundList("tom_2.ogg"),
-            SoundList("kick_04.ogg"),
+            SoundList("kick_04.ogg")
         )
 
         a0CustomAdapter = CustomAdapter(this, a0SoundList, this)
@@ -2088,6 +2091,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         bbCustomAdapter = CustomAdapter(this, bbSoundList, this)
         sCustomAdapter = CustomAdapter(this, sSoundList, this)
         tCustomAdapter = CustomAdapter(this, tSoundList, this)
+        uCustomAdapter = CustomAdapter(this, uSoundList, this)
 
         soundListView.adapter = aCustomAdapter
 
@@ -2348,7 +2352,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
         }
 
-        lmp = LoopMediaPlayer.create(this, Uri.parse("android.resource://" + packageName + "/raw/" + R.raw.guitar_85_01))
+        lmp = LoopMediaPlayer.create(this, Uri.parse("android.resource://" + packageName + "/raw/" + R.raw.bass_100_01))
         lmp.stop()
 
 
